@@ -32,7 +32,7 @@ export class AppComponent {
   constructor(public translate: TranslateService) {
     //------------------------------------------------------------
     //@STCGoal Show a Site in French
-    translate.addLangs(['en', 'fr']); //@o Adding two language
+    translate.addLangs(this.langSupported); //@o Adding two language
     translate.setDefaultLang('en'); //@o Default French
 
     if (!this.bypassLang) {

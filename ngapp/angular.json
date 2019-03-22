@@ -29,7 +29,8 @@
                 "input": "./node_modules/country-icons/Markup/blocks/lng/i/",
                 "output": "assets/i18n.icon/"
               },
-              "src/assets"
+              "src/assets",
+              "src/assets/i18n"
             ],
             "styles": [
               "src/styles.scss"
