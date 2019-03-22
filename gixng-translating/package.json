@@ -1,0 +1,28 @@
+{
+  "name": "gixng-translating",
+  "version": "0.0.0",
+  "description": "A Package to assist in translating angular app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuillaumeIsabelleX/ngtranslating-mastery.git"
+  },
+  "keywords": [
+    "angular",
+    "translating",
+    "gix"
+  ],
+  "author": "Guillaume Isabelle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuillaumeIsabelleX/ngtranslating-mastery/issues"
+  },
+  "homepage": "https://github.com/GuillaumeIsabelleX/ngtranslating-mastery#readme",
+  "dependencies": {
+    "@ngx-translate/core": "^11.0.1",
+    "country-icons": "^1.0.2"
+  }
+}
