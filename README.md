@@ -4,9 +4,10 @@
 STATE: Suceeded
 URL : https://guillaumeisabellex.github.io/ngtranslating-mastery/docs/
 INSIGHT:  ngx-translate
-## HOWTO: Using ngx-translate
 
- https://github.com/guillaumeisabellex/ngtranslating-mastery#ngx-translate
+## HOWTO see: [NGX-Translating-Mastery]()
+
+[NGX-Translating-Mastery]:https://github.com/guillaumeisabellex/ngtranslating-mastery#ngx-translate
 
 ---
 
