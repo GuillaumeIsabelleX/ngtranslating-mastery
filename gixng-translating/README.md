@@ -6,15 +6,16 @@
 
 
 
+
 ## Installing
 
 ```bash
-# Does install all that is above
-npm i gixng-translating --save
+# Does install all that is bellow (ngx-translate +  country-icons)
+yarn add gixng-translating --save
 ```
+---
 ### what it install:
 ```bash
-npm install @ngx-translate/core --save
 yarn add @ngx-translate/core --save
 ```
 
@@ -439,5 +440,5 @@ ___
 [Create a translation source file]:https://angular.io/guide/i18n#create-a-translation-source-file
 
 
-  [ngtranslating-mastery]:https://guillaumeisabellex.github.io/ngtranslating-mastery/docs/
+  [ngtranslating-mastery]:http://guillaumeisabelle.com/r/ngtranslating-mastery/docs/npmjs
 
