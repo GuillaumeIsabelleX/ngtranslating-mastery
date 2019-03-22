@@ -16,16 +16,28 @@ yarn add gixng-translating --save
 ---
 ### what it install:
 ```bash
+# We use ngx-tranlate
 yarn add @ngx-translate/core --save
-```
 
-### Displaying an Icon of Country
-```bash
+# Displaying an Icon of Country
 yarn add country-icons --save
 ```
 
 ## Files
 * Here are the main file to help understand what is done for translating.
+
+|  File 	|   	|   	|   	|   	|
+|---	|---	|---	|---	|---	|
+|  [angular.json](#angularjson) 	|  Copy the Culture icon in assets 	|   	|   	|   	|
+|   [app.module.ts](#app.module.ts)	|  uses TranslationService 	|   	|   	|   	|
+|   [app.component.ts](#app.component.ts)	|  Sets up language 	|   	|   	|   	|
+|   [app.component.html](#app.component.html)	|   Choose language	|   	|   	|   	|
+ 
+ 
+
+
+
+---
 
 
 ### angular.json
@@ -69,6 +81,7 @@ yarn add @ngx-translate/core --save
 ```bash
 yarn add country-icons --save
 ```
+
 ### angular.json
 ```json
 "assets": [
@@ -81,6 +94,7 @@ yarn add country-icons --save
      "src/assets"
    ],
 ```
+
 ### [app.module.ts]()
 [app.module.ts]:https://github.com/GuillaumeIsabelleX/ngtranslating-mastery/blob/master/ngapp/src/app/app.module.ts
 
