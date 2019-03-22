@@ -15,6 +15,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
+  //@STCissue Should take care of the Assets language relative path
   return new TranslateHttpLoader(httpClient,"./assets/i18n/",".json");
 }
 
