@@ -1,7 +1,6 @@
 {
    "LANG": {
-      "NAME": "French",
-      "ICON": "fr.png"
+      "NAME": "French"
    },
    "HOME": {
       "HELLO": "Bonjour, essayons ngx-translate",

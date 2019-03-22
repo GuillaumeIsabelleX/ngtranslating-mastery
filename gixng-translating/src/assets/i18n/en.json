@@ -1,7 +1,6 @@
 {
    "LANG": {
-      "NAME": "English",
-      "ICON": "en.svg"
+      "NAME": "English"
    },
    "HOME": {
       "HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",

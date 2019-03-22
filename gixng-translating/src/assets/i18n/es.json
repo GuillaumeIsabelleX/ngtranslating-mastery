@@ -1,9 +1,10 @@
 {
-   "LANG":{"NAME":"Spanish","ICON":"es.svg"},
-   
+   "LANG": {
+      "NAME": "Spanish"
+   },
    "HOME": {
       "HELLO": "Bienvenido, intentemos ngx-translate",
-      "TITLE":"Bienvenido a "
+      "TITLE": "Bienvenido a "
    },
-   "HELPSTART":"Aquí hay algunos enlaces para ayudarte a comenzar:"
+   "HELPSTART": "Aquí hay algunos enlaces para ayudarte a comenzar:"
 }
