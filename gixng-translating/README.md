@@ -1,22 +1,36 @@
 
-# [ngx-translate]()
+# Internationalizing an Angular App
+
+* Using :[ngx-translate]()
+* Demo page: [ngtranslating-mastery]()
+
+
+
 ## Installing
 
-
-
+```bash
+# Does install all that is above
+npm i gixng-translating --save
+```
+### what it install:
 ```bash
 npm install @ngx-translate/core --save
 yarn add @ngx-translate/core --save
 ```
 
-## Displaying an Icon of Country
+### Displaying an Icon of Country
 ```bash
 yarn add country-icons --save
 ```
+
+## Files
+* Here are the main file to help understand what is done for translating.
+
+
 ### angular.json
 ```json
 "assets": [
-     "src/favicon.ico",
+  "src/favicon.ico",
      {
        "glob": "*.svg",
        "input": "./node_modules/country-icons/Markup/blocks/lng/i/",
@@ -38,7 +52,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
- //----------------------------------------------
+  //----------------------------------------------
   //@STCissue Should take care of the Assets language relative path
 # [ngx-translate]()
 ## ngx-translate VSCode Extension ???
@@ -57,7 +71,7 @@ yarn add country-icons --save
 ### angular.json
 ```json
 "assets": [
-     "src/favicon.ico",
+  "src/favicon.ico",
      {
        "glob": "*.svg",
        "input": "./node_modules/country-icons/Markup/blocks/lng/i/",
@@ -79,7 +93,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
- //----------------------------------------------
+  //----------------------------------------------
   //@STCissue Should take care of the Assets language relative path
   return new TranslateHttpLoader(httpClient,"./assets/i18n/",".json");
 
@@ -129,7 +143,7 @@ export class AppComponent {
   //relpath = relpath;
 
   refreshIconPath() {
-
+    
     this.iconpath = this.getLanguageIconPath(this.browserLang);
   }
 
@@ -146,7 +160,7 @@ export class AppComponent {
    *
    */
   constructor(public translate: TranslateService) {
-  //  console.log(this.relpath);
+    //  console.log(this.relpath);
     //------------------------------------------------------------
     //@STCGoal Show a Site in French
     translate.addLangs(this.langSupported); //@o Adding two language
@@ -197,7 +211,7 @@ export class AppComponent {
 >
 
 <div fxLayout="row" >
-
+  
   <span *ngFor="let l of langSupported"   >
     <button class="lang-button" (click)="setLanguage(l)" >{{l|uppercase }} <img [src]="getLanguageIconPath(l)"  class="lang-icon"></button>
   </span>
@@ -218,12 +232,12 @@ export class AppComponent {
 ### assets/i18n/en.json
 ```json
 {
-   "LANG": {
-      "NAME": "English",
+  "LANG": {
+    "NAME": "English",
       "ICON": "en.svg"
    },
    "HOME": {
-      "HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",
+     "HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",
       "TITLE": "Welcome to "
    },
    "HELPSTART":"Here are some links to help you start:"
@@ -369,7 +383,7 @@ export class AppComponent {
 >
 
 <div fxLayout="row" >
-
+  
   <span *ngFor="let l of langSupported"   >
     <button class="lang-button" (click)="setLanguage(l)" >{{l|uppercase }} <img [src]="getLanguageIconPath(l)"  class="lang-icon"></button>
   </span>
@@ -381,7 +395,7 @@ export class AppComponent {
 <h3>Current browser lang: {{browserLang}} <img [src]="getLanguageIconPath(browserLang)"  class="lang-icon"></h3>
 <div style="text-align:center">
   <h1>
-     <span id="title">{{'HOME.TITLE' | translate}} {{title}}</span></h1>
+    <span id="title">{{'HOME.TITLE' | translate}} {{title}}</span></h1>
 
 ```
 
@@ -391,11 +405,11 @@ export class AppComponent {
 ```json
 {
    "LANG": {
-      "NAME": "English",
+     "NAME": "English",
       "ICON": "en.svg"
    },
    "HOME": {
-      "HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",
+     "HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",
       "TITLE": "Welcome to "
    },
    "HELPSTART":"Here are some links to help you start:"
@@ -412,6 +426,7 @@ ___
 * [Setting up the locale of your app]()
 * [Create a translation source file]()
 * [ngx-translate]()  [app.module.ts]()
+* [ngtranslating-mastery]()
 
 [ngx-translate]:https://github.com/ngx-translate/core#installation
 
@@ -424,4 +439,5 @@ ___
 [Create a translation source file]:https://angular.io/guide/i18n#create-a-translation-source-file
 
 
+  [ngtranslating-mastery]:https://guillaumeisabellex.github.io/ngtranslating-mastery/docs/
 
