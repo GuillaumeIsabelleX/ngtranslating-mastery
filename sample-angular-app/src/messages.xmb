@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE messagebundle [
+<!ELEMENT messagebundle (msg)*>
+<!ATTLIST messagebundle class CDATA #IMPLIED>
+
+<!ELEMENT msg (#PCDATA|ph|source)*>
+<!ATTLIST msg id CDATA #IMPLIED>
+<!ATTLIST msg seq CDATA #IMPLIED>
+<!ATTLIST msg name CDATA #IMPLIED>
+<!ATTLIST msg desc CDATA #IMPLIED>
+<!ATTLIST msg meaning CDATA #IMPLIED>
+<!ATTLIST msg obsolete (obsolete) #IMPLIED>
+<!ATTLIST msg xml:space (default|preserve) "default">
+<!ATTLIST msg is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<messagebundle>
+  <msg id="introductionHeader" desc="An introduction header for this sample" meaning="User welcome"><source>app/app.component.html:1,3</source>
+  Hello i18n!
+</msg>
+  <msg id="5206857922697139278"><source>app/app.component.html:5</source>I don&apos;t output any element</msg>
+  <msg id="392942015236586892"><source>app/app.component.html:9</source>Angular logo</msg>
+  <msg id="3813479775021432189"><source>app/app.component.html:12</source>Updated <ph name="ICU"><ex>{minutes, plural, =0 {...} =1 {...} other {...}}</ex>{minutes, plural, =0 {...} =1 {...} other {...}}</ph></msg>
+  <msg id="6137860789874441254"><source>app/app.component.html:12</source>{VAR_PLURAL, plural, =0 {just now} =1 {one minute ago} other {<ph name="INTERPOLATION"><ex>{{minutes}}</ex>{{minutes}}</ph> minutes ago} }</msg>
+  <msg id="8511147241295446916"><source>app/app.component.html:16</source>The author is <ph name="ICU"><ex>{gender, select, male {...} female {...} other {...}}</ex>{gender, select, male {...} female {...} other {...}}</ph></msg>
+  <msg id="7842238767399919809"><source>app/app.component.html:16</source>{VAR_SELECT, select, male {male} female {female} other {other} }</msg>
+  <msg id="3574833283807905682"><source>app/app.component.html:18,22</source>Updated: <ph name="ICU"><ex>{minutes, plural, =0 {...} =1 {...} other {...}}</ex>{minutes, plural, =0 {...} =1 {...} other {...}}</ph>
+</msg>
+  <msg id="706522873846283432"><source>app/app.component.html:18,21</source>{VAR_PLURAL, plural, =0 {just now} =1 {one minute ago} other {<ph name="INTERPOLATION"><ex>{{minutes}}</ex>{{minutes}}</ph> minutes ago by {VAR_SELECT, select, male {male} female {female} other {other} }} }</msg>
+</messagebundle>
