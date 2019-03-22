@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// import {environment} from '../environments/environment';
+// let relpath = environment.relpath;
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 
 
 //@urir https://stackblitz.com/github/ngx-translate/example?file=src%2Fapp%2Fapp.module.ts
@@ -15,6 +16,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
+ //----------------------------------------------
   //@STCissue Should take care of the Assets language relative path
   return new TranslateHttpLoader(httpClient,"./assets/i18n/",".json");
 }
@@ -40,6 +42,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    
+  ]
 })
-export class AppModule { }
+export class AppModule { 
+  // relpath = relpath;
+}

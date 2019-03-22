@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
 
+// import {environment} from '../environments/environment';
+// let relpath = environment.relpath;
+
 
 //@STCGoal Show a Site in French
 import { TranslateService } from '@ngx-translate/core';
@@ -12,24 +15,27 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  //relpath = relpath;
+  
   refreshIconPath() {
 
     this.iconpath = this.getLanguageIconPath(this.browserLang);
   }
-
+  
   langSupported = ['en', 'fr', 'es'];
 
   title = 'ngtranslating-mastery';
   browserLang = '';
   bypassLang = true;
-
+  
   iconpathbase = 'assets/i18n.icon/';
   iconpath = '';
-
+  
   /**
    *
    */
   constructor(public translate: TranslateService) {
+  //  console.log(this.relpath);
     //------------------------------------------------------------
     //@STCGoal Show a Site in French
     translate.addLangs(this.langSupported); //@o Adding two language

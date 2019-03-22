@@ -1,12 +1,12 @@
 {
   "name": "ngtranslating-mastery",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build", 
      "build:docs": "ng build --prod --output-path ../docs --base-href /ngtranslating-mastery/docs && cp ../docs/index.html ../docs/404.html ",
-    "commit:docs": "(cd .. ; git add docs/* ;  git commit docs -m \"docs updated\" && git push)",
+    "commit:docs": "./commit_docs.sh",
     "release:docs": "npm run build:docs && npm run commit:docs",
     "browse:release": "gixb https://guillaumeisabellex.github.io/ngtranslating-mastery/",
     "browse:repo": "gixb https://github.com/guillaumeisabellex/ngtranslating-mastery",
