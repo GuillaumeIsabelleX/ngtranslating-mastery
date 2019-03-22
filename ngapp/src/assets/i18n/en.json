@@ -1,6 +1,11 @@
 {
+   "LANG": {
+      "NAME": "English",
+      "ICON": "en.svg"
+   },
    "HOME": {
       "HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",
-      "TITLE":"Welcome to  (Find how to get title in translation) "
-   }
+      "TITLE": "Welcome to "
+   },
+   "HELPSTART":"Here are some links to help you start:"
 }

@@ -1,6 +1,11 @@
 {
+   "LANG": {
+      "NAME": "French",
+      "ICON": "fr.png"
+   },
    "HOME": {
       "HELLO": "Bonjour, essayons ngx-translate",
-      "TITLE":"Bienvenue a "
-   }
+      "TITLE": "Bienvenue a "
+   },
+   "HELPSTART":"Voici des liens pour aider a demarrer:"
 }

@@ -11,6 +11,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -26,6 +28,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
     //@a Make the Pipe Translate to load local from assets
     HttpClientModule,
+    FlexLayoutModule,
 
     TranslateModule.forRoot({
       loader: {
