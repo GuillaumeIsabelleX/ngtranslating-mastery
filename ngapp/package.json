@@ -4,7 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build", 
+     "build:docs": "ng build --prod --output-path ../docs --base-href /ngtranslating-mastery/docs && cp ../docs/index.html ../docs/404.html ",
+    "commit:docs": "git add ../docs/* ;  git commit ../docs -m \"docs updated\" && git push ../docs",
+    "release:docs": "npm run build:docs && npm run commit:docs",
+    "browse:release": "gixb https://guillaumeisabellex.github.io/ngtranslating-mastery/",
+    "browse:repo": "gixb https://github.com/guillaumeisabellex/ngtranslating-mastery",
+    
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -12,9 +18,11 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
+    "@angular/cdk": "^7.3.5",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
+    "@angular/flex-layout": "^7.0.0-beta.24",
     "@angular/forms": "~7.2.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
