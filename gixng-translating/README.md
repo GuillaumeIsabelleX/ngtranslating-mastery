@@ -1,8 +1,8 @@
 
 # Internationalizing an Angular App
 
-* Using :[ngx-translate]()
-* Demo page: [ngtranslating-mastery]()
+* Using : https://github.com/ngx-translate/core#installation
+* Demo page:  http://guillaumeisabelle.com/r/ngtranslating-mastery/docs/npmjs
 
 
 
@@ -453,8 +453,6 @@ ___
 
 [Create a translation source file]:https://angular.io/guide/i18n#create-a-translation-source-file
 
-
-[ngtranslating-mastery]:http://guillaumeisabelle.com/r/ngtranslating-mastery/docs/npmjs
 
 
 
