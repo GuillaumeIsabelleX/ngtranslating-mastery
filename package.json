@@ -1,0 +1,26 @@
+{
+  "name": "ngtranslating-mastery",
+  "version": "1.0.0",
+  "description": "Mastery Experimentations for Internationalizing an App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release:docs": "./release_docs.sh",
+    "browse:release:docs": "gixb https://guillaumeisabellex.github.io/ngtranslating-mastery/docs/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuillaumeIsabelleX/ngtranslating-mastery.git"
+  },
+  "keywords": [
+    "internationalizing",
+    "culture",
+    "translation"
+  ],
+  "author": "Guillaume Isabelle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuillaumeIsabelleX/ngtranslating-mastery/issues"
+  },
+  "homepage": "https://github.com/GuillaumeIsabelleX/ngtranslating-mastery#readme"
+}
