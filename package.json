@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release:docs": "./release_docs.sh",
-    "browse:release:docs": "gixb https://guillaumeisabellex.github.io/ngtranslating-mastery/docs/"
+    "browse:release:docs": "gixb https://guillaumeisabellex.github.io/ngtranslating-mastery/docs/",
+    "browse:repo": "gixb https://github.com/guillaumeisabellex/ngtranslating-mastery"
   },
   "repository": {
     "type": "git",

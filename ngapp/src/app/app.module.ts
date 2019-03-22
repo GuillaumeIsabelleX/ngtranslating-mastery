@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 
 //@urir https://stackblitz.com/github/ngx-translate/example?file=src%2Fapp%2Fapp.module.ts
+
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';

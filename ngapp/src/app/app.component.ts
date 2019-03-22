@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 
 
-// import {environment} from '../environments/environment';
-// let relpath = environment.relpath;
-
-
 //@STCGoal Show a Site in French
 import { TranslateService } from '@ngx-translate/core';
 
@@ -52,7 +48,7 @@ export class AppComponent {
 
     this.refreshIconPath();
 
-    //------------------------------------------------------------
+    //--------------------------
 
 
   }
