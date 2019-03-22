@@ -455,5 +455,7 @@ ___
 [Create a translation source file]:https://angular.io/guide/i18n#create-a-translation-source-file
 
 
-  [ngtranslating-mastery]:http://guillaumeisabelle.com/r/ngtranslating-mastery/docs/npmjs
+[ngtranslating-mastery]:http://guillaumeisabelle.com/r/ngtranslating-mastery/docs/npmjs
+
+
 
