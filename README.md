@@ -54,7 +54,22 @@ npm install @ngx-translate/core --save
 yarn add @ngx-translate/core --save
 ```
 
-
+## Displaying an Icon of Country
+```bash
+yarn add country-icons --save
+```
+### angular.json
+```json
+"assets": [
+     "src/favicon.ico",
+     {
+       "glob": "*.svg",
+       "input": "./node_modules/country-icons/Markup/blocks/lng/i/",
+       "output": "assets/i18n.icon/"
+     },
+     "src/assets"
+   ],
+```
 ___
 
 ## Resources
