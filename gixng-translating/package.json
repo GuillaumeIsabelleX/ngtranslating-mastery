@@ -1,6 +1,6 @@
 {
   "name": "gixng-translating",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A Package to assist in translating angular app",
   "main": "index.js",
   "scripts": {
