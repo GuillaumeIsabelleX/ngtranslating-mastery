@@ -1,10 +1,15 @@
 {
-   "LANG": {
-      "NAME": "French"
-   },
-   "HOME": {
-      "HELLO": "Bonjour, essayons ngx-translate",
-      "TITLE": "Bienvenue a "
-   },
-   "HELPSTART":"Voici des liens pour aider a demarrer:"
+	"CONTACT": {
+		"TITLE": "{{username}} Contactez-nous avec ces moyens:"
+	},
+	"HELPSTART": "Voici des liens pour aider a demarrer:",
+	"HOME": {
+		"HELLO": "Bonjour, essayons ngx-translate",
+		"MSG": "Bienvenue dans cette traduction fantastique. Utilisation de l'éditeur BabelEdit est excellent. Vous avez vos 3 chaînes dans une page.",
+		"TITLE": "Bienvenue a "
+	},
+	"LANG": {
+		"NAME": "French"
+	},
+	"WELCOME": "Bienvenue {{name}}"
 }
