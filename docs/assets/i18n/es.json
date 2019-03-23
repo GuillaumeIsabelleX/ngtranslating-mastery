@@ -1,9 +1,11 @@
 {
-   "LANG":{"NAME":"Spanish","ICON":"es.svg"},
-   
-   "HOME": {
-      "HELLO": "Bienvenido, intentemos ngx-translate",
-      "TITLE":"Bienvenido a "
-   },
-   "HELPSTART":"Aquí hay algunos enlaces para ayudarte a comenzar:"
+	"HELPSTART": "Aquí hay algunos enlaces para ayudarte a comenzar:",
+	"HOME": {
+		"HELLO": "Bienvenido, intentemos ngx-translate",
+		"MSG": "Bienvenidos a esta fantástica traducción. Usar el Editor BabelEdit es genial. Tienes tus 3 cadenas en una sola página.",
+		"TITLE": "Bienvenido a "
+	},
+	"LANG": {
+		"NAME": "Spanish"
+	}
 }
