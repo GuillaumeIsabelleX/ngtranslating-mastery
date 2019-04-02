@@ -1,3 +1,8 @@
+# Future Feature
+* Rather than copy the country-icons, use :https://unpkg.com/country-icons@1.0.2/Markup/blocks/lng/i/ca.svg
+** URL + $country + .svg
+
+
 # ngtranslating-mastery
 @STCGoal Translating an Angular App - Creating Multi-Cultural App
 
