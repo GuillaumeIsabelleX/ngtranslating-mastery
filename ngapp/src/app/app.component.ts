@@ -70,6 +70,8 @@ export class AppComponent {
    * @param l 
    */
   setLanguage(l: string) {
+    console.log("Changing language to: " + l);
+    
     this.browserLang = l;
     this.translate.use(this.browserLang);
     this.refreshIconPath();

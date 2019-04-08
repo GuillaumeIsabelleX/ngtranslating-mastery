@@ -14,11 +14,7 @@ import { TranslateLoader, TranslateModule, TranslateService } from "@ngx-transla
 import { AppComponent } from './app.component';
 import { HttpLoaderFactory } from "./app.module";
 import { By } from '@angular/platform-browser';
-
-// const TRANSLATIONS_EN = require('../assets/i18n/en.json');
-// const TRANSLATIONS_FR = require('../assets/i18n/fr.json');
-
-
+import { ExpectedConditions } from 'protractor';
 
 describe('AppComponent', () => {
 
@@ -55,10 +51,10 @@ describe('AppComponent', () => {
 
 
       //@test Had clicked a button on the UI which sets up a value we validate
+
       var button = fixture.debugElement.query(By.css('#doSomething'));
 
       button.nativeElement.click();
-
 
 
     });;
@@ -89,10 +85,62 @@ describe('AppComponent', () => {
   });
 
   it('should do something by clicking a button', async(
-    () => {     
+    () => {
 
       expect(component.doResult).toContain('result');
     }
   ));
 
+  //@testing Transtaltion are loading
+  it('should load translation files',
+    async(
+      () => {
+        let TRANSLATIONS_EN: any;
+        let TRANSLATIONS_FR: any;
+        try {
+
+          TRANSLATIONS_EN = require('../assets/i18n/en.json');
+          TRANSLATIONS_FR = require('../assets/i18n/fr.json');
+
+          console.log(TRANSLATIONS_FR.HOME.TITLE);
+
+
+        } catch (error) {
+
+        }
+
+        //@testing some of the Translation object that should be read to pass the test
+        expect(TRANSLATIONS_EN.HOME).toBeTruthy();
+        expect(TRANSLATIONS_EN.LANG).toBeTruthy();
+        expect(TRANSLATIONS_EN.LANG.NAME).toEqual("English");
+        expect(TRANSLATIONS_FR.HOME).toBeTruthy();
+        expect(TRANSLATIONS_FR.LANG).toBeTruthy();
+        expect(TRANSLATIONS_FR.LANG.NAME).toEqual("French");
+ 
+      }
+    ));
+
+
+  //@test Languages is working
+  it('should validate language button works',
+    async(
+      () => {
+        const fixture = TestBed.createComponent(AppComponent);
+
+        let component: AppComponent;
+        component = fixture.componentInstance;
+
+        fixture.detectChanges();
+
+        //Get the title in HTML
+        let de = fixture.debugElement.query(By.css('#title'));
+        let el: HTMLSpanElement;
+
+        el = de.nativeElement;
+        console.log("SPAN: " + el.textContent);
+
+        expect(el.textContent).toContain(component.title);
+
+      }
+    ));
 });
