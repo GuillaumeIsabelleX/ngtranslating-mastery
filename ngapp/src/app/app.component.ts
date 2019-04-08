@@ -13,9 +13,10 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   //relpath = relpath;
   username = "Guillaume";
+  doResult:string;
   
   refreshIconPath() {
-
+    
     this.iconpath = this.getLanguageIconPath(this.browserLang);
   }
   
@@ -52,6 +53,8 @@ export class AppComponent {
     //--------------------------
 
 
+    this.doResult = 'just initialized';
+
   }
 
   /**
@@ -70,5 +73,14 @@ export class AppComponent {
     this.browserLang = l;
     this.translate.use(this.browserLang);
     this.refreshIconPath();
+  }
+
+
+  doSomething(){
+    console.log("do sometghing just ran");
+    this.doResult = 'result passed';
+
+    let bugTheTest = false;
+    if (bugTheTest)this.doResult = 'ERROR';
   }
 }

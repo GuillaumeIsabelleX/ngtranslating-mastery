@@ -9,8 +9,11 @@
     <button class="lang-button" (click)="setLanguage(l)" [id]="l" >{{l|uppercase }} <img [src]="getLanguageIconPath(l)"  class="lang-icon"></button> 
   </span>
 </div>
-  <hr>
 
+  <hr>
+<button id="doSomething" (click)="doSomething()">Do Something</button> Value : 
+<span>{{doResult | async}}</span>
+<hr>
 
 <span>{{'HOME.HELLO' | translate}}</span>
 <h3>Current browser lang: {{browserLang}} <img [src]="getLanguageIconPath(browserLang)"  class="lang-icon"></h3>
