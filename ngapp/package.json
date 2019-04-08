@@ -10,7 +10,9 @@
     "release:docs": "npm run build:docs && npm run commit:docs",
     "browse:release": "gixb https://guillaumeisabellex.github.io/ngtranslating-mastery/",
     "browse:repo": "gixb https://github.com/guillaumeisabellex/ngtranslating-mastery",
-    "test": "ng test",
+    "test": "ng test --watch false",
+    "test:watch": "ng test --watch true",
+
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
