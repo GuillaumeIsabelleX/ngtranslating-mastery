@@ -14,8 +14,8 @@ import {TranslateLoader, TranslateModule, TranslateService} from "@ngx-translate
 import {AppComponent} from './app.component';
 import {HttpLoaderFactory} from "./app.module";
 
-const TRANSLATIONS_EN = require('../assets/i18n/en.json');
-const TRANSLATIONS_FR = require('../assets/i18n/fr.json');
+// const TRANSLATIONS_EN = require('../assets/i18n/en.json');
+// const TRANSLATIONS_FR = require('../assets/i18n/fr.json');
 
 
 
@@ -65,7 +65,15 @@ beforeEach(async(() => {
   it(`should have as title 'ngtranslating-mastery'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ngtranslating-mastery');
+    expect(app.title).toContain('ngtranslating-mastery');
+  });
+  
+  it(`should have an english title containing 'Welcome'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.setLanguage('en');
+    console.log(app.title);
+    expect(app.title).toContain('Welcome');
   });
   
   //TRANSLATED so forgetting to test that... but might
@@ -76,35 +84,5 @@ beforeEach(async(() => {
     //   expect(compiled.querySelector('h1').textContent).toContain('Welcome to ngtranslating-mastery!');
     // });
     
-  it('should load translations', async(() => {
-    spyOn(translate, 'getBrowserLang').and.returnValue('en');
-    const fixture = TestBed.createComponent(AppComponent);
-    const compiled = fixture.debugElement.nativeElement;
-
-    // the DOM should be empty for now since the translations haven't been rendered yet
-     expect(compiled.querySelector('#title').textContent).toEqual('');
-
-    http.expectOne('/assets/i18n/fr.json').flush(TRANSLATIONS_FR);
-    http.expectNone('/assets/i18n/en.json');
-
-    //Finally, assert that there are no outstanding requests.
-   http.verify();
-
-    fixture.detectChanges();
-    // the content should be translated to english now
-    expect(compiled.querySelector('#title').textContent).toEqual(TRANSLATIONS_EN.HOME.TITLE);
-
-    translate.use('fr');
-    http.expectOne('/assets/i18n/fr.json').flush(TRANSLATIONS_FR);
-
-    // Finally, assert that there are no outstanding requests.
-    http.verify();
-
-    // the content has not changed yet
-    expect(compiled.querySelector('#title').textContent).toEqual(TRANSLATIONS_EN.HOME.TITLE);
-
-    fixture.detectChanges();
-    // the content should be translated to french now
-    expect(compiled.querySelector('#title').textContent).toEqual(TRANSLATIONS_FR.HOME.TITLE);
-  }));
+    
 });
