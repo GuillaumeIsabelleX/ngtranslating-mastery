@@ -24,5 +24,9 @@ jobs:
 
       - run: cd ngapp && yarn install
 
+        # GIT User setup so we can publish the Doc
+      - run: git config --global user.email "jgi@jgwill.com" && git config --global user.name "Guillaume Isabelle"
+
+        # Test and build, release the Docs
       - run: cd ngapp && yarn test && yarn release:docs
 
