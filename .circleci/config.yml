@@ -13,7 +13,9 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
+     # - checkout
+
+      - run: git clone https://${GITHUB_TOKEN}@github.com/GuillaumeIsabelleX/ngtranslating-mastery.git .
 
       # Download and cache dependencies
       - restore_cache:
@@ -29,4 +31,9 @@ jobs:
 
         # Test and build, release the Docs
       - run: cd ngapp && yarn test && yarn release:docs
+
+        # release:docs using ${GITHUB_TOKEN}
+        # https://github.com/GuillaumeIsabelleX/ngtranslating-mastery.git
+        # - run: git clone https://${GITHUB_TOKEN}@github.com/GuillaumeIsabelleX/ngtranslating-mastery.git
+
 
