@@ -22,12 +22,6 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: yarn install
+      - run: cd ngapp && yarn install
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # run tests!
-      - run: yarn test
+      - run: cd ngapp && yarn test
