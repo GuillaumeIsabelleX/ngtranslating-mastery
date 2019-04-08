@@ -70,9 +70,7 @@ describe('AppComponent', () => {
     expect(component.title).toContain('ngtranslating-mastery');
   });
 
-  beforeAll(function (done) {
-    setTimeout(done, 2000);
-  });
+  
 
 
   it('should have selected the button using its id using CSS', function () {
@@ -84,27 +82,10 @@ describe('AppComponent', () => {
     () => {
       spyOn(component, 'doSomething');
 
-      // var button = fixture.debugElement.query(By.css('#doSomething'));
-
-      // button.nativeElement.click();
-
       
       expect(component.doResult).toContain('result');
     }
   ));
 
-  // it('should', async(() => {
-  //   spyOn(component, 'setLanguage');
-
-  //   let button = fixture.debugElement.nativeElement.querySelector('button');
-  //   button.click();
-
-  //   fixture.whenStable().then(() => {
-  //     expect(component.onEditButtonClick).toHaveBeenCalled();
-  //   });
-
-
-
-  // }
-  // ));
+  
 });
