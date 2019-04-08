@@ -53,9 +53,13 @@ describe('AppComponent', () => {
       fixture = TestBed.createComponent(AppComponent);
       component = fixture.componentInstance;
 
+
+      //@test Had clicked a button on the UI which sets up a value we validate
       var button = fixture.debugElement.query(By.css('#doSomething'));
 
       button.nativeElement.click();
+
+      
 
     });;
 
