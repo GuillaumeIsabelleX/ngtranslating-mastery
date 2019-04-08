@@ -59,9 +59,15 @@ describe('AppComponent', () => {
 
       button.nativeElement.click();
 
-      
+
 
     });;
+
+
+
+
+
+
 
   }));
 
@@ -74,7 +80,7 @@ describe('AppComponent', () => {
     expect(component.title).toContain('ngtranslating-mastery');
   });
 
-  
+
 
 
   it('should have selected the button using its id using CSS', function () {
@@ -83,13 +89,10 @@ describe('AppComponent', () => {
   });
 
   it('should do something by clicking a button', async(
-    () => {
-      spyOn(component, 'doSomething');
+    () => {     
 
-      
       expect(component.doResult).toContain('result');
     }
   ));
 
-  
 });
