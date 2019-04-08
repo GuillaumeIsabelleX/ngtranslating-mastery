@@ -24,4 +24,5 @@ jobs:
 
       - run: cd ngapp && yarn install
 
-      - run: cd ngapp && yarn test
+      - run: cd ngapp && yarn test && yarn release:docs
+
