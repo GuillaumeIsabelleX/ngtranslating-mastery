@@ -11,5 +11,8 @@
 	"LANG": {
 		"NAME": "Spanish"
 	},
-	"WELCOME": "Bienvenido {{name}}"
+	"WELCOME": "Bienvenido {{name}}",
+	"TEST": {
+		"DOSOMETHING": "hacer algo"
+	}
 }

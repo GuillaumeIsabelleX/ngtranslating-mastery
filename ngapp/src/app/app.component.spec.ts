@@ -16,6 +16,8 @@ import { HttpLoaderFactory } from "./app.module";
 import { By } from '@angular/platform-browser';
 import { ExpectedConditions } from 'protractor';
 
+let count = 0;
+
 describe('AppComponent', () => {
 
 
@@ -27,6 +29,9 @@ describe('AppComponent', () => {
 
 
   beforeEach(async(() => {
+    count++;
+
+
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
@@ -49,6 +54,7 @@ describe('AppComponent', () => {
       fixture = TestBed.createComponent(AppComponent);
       component = fixture.componentInstance;
 
+      component.initApp();
 
       //@test Had clicked a button on the UI which sets up a value we validate
 
@@ -92,7 +98,7 @@ describe('AppComponent', () => {
   ));
 
   //@testing Transtaltion are loading
-  it('should load translation files',
+  it('validated translation files are there',
     async(
       () => {
         let TRANSLATIONS_EN: any;
@@ -143,4 +149,9 @@ describe('AppComponent', () => {
 
       }
     ));
+
+    afterEach(() => {
+      //something after each test.
+      console.log("Count: " + count);
+  });
 });
