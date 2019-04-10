@@ -24,10 +24,11 @@ jobs:
       - run: git config --global user.email "jgi@jgwill.com" && git config --global user.name "Guillaume Isabelle"
 
         # Test and build, release the Docs
+      - run: pwd && ls docs
       - run: cd ngapp && yarn test
       # && yarn release:docs
       - run: cd ngapp && yarn build:docs
-      
+      - run: pwd && ls docs
       - run: git add docs/*
       - run: git commit docs -m "docs updated by CircleCI"
 
