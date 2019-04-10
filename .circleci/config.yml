@@ -16,6 +16,7 @@ jobs:
      # - checkout
 
       - run: git clone https://${GITHUB_TOKEN}@github.com/GuillaumeIsabelleX/ngtranslating-mastery.git .
+      - run:  git pull
 
 
       - run: cd ngapp && yarn install
@@ -24,6 +25,7 @@ jobs:
       - run: git config --global user.email "jgi@jgwill.com" && git config --global user.name "Guillaume Isabelle"
 
         # Test and build, release the Docs
+      - run: ls ngapp/src/assets/i18n
       - run: pwd && ls docs
       - run: cd ngapp && yarn test
       # && yarn release:docs
