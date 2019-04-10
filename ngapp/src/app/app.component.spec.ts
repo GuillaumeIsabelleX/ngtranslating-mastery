@@ -103,10 +103,12 @@ describe('AppComponent', () => {
       () => {
         let TRANSLATIONS_EN: any;
         let TRANSLATIONS_FR: any;
+        let TRANSLATIONS_DE: any;
         try {
 
           TRANSLATIONS_EN = require('../assets/i18n/en.json');
           TRANSLATIONS_FR = require('../assets/i18n/fr.json');
+          TRANSLATIONS_DE = require('../assets/i18n/de.json');
 
           console.log(TRANSLATIONS_FR.HOME.TITLE);
 
@@ -122,13 +124,16 @@ describe('AppComponent', () => {
         expect(TRANSLATIONS_FR.HOME).toBeTruthy();
         expect(TRANSLATIONS_FR.LANG).toBeTruthy();
         expect(TRANSLATIONS_FR.LANG.NAME).toEqual("French");
- 
+        
+        expect(TRANSLATIONS_DE.HOME).toBeTruthy();
+        expect(TRANSLATIONS_DE.LANG).toBeTruthy();
+        expect(TRANSLATIONS_DE.LANG.NAME).toEqual("German");
       }
     ));
 
 
   //@test Languages is working
-  it('should validate language button works',
+  it('validated language selection works',
     async(
       () => {
         const fixture = TestBed.createComponent(AppComponent);

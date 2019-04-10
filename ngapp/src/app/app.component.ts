@@ -48,7 +48,7 @@ export class AppComponent {
     this.iconpath = this.getLanguageIconPath(this.browserLang);
   }
   
-  langSupported = ['en', 'fr', 'es'];
+  langSupported = ['en', 'fr', 'es','de'];
 
   title = 'ngtranslating-mastery';
   browserLang = '';
