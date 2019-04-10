@@ -17,12 +17,6 @@ jobs:
 
       - run: git clone https://${GITHUB_TOKEN}@github.com/GuillaumeIsabelleX/ngtranslating-mastery.git .
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
 
       - run: cd ngapp && yarn install
 
@@ -30,7 +24,12 @@ jobs:
       - run: git config --global user.email "jgi@jgwill.com" && git config --global user.name "Guillaume Isabelle"
 
         # Test and build, release the Docs
-      - run: cd ngapp && yarn test && yarn release:docs
+      - run: cd ngapp && yarn test
+      # && yarn release:docs
+      - run: cd ngapp && yarn build:docs
+      
+      - run: git add docs/*
+      - run: git commit docs -m "docs updated by CircleCI"
 
         # release:docs using ${GITHUB_TOKEN}
         # https://github.com/GuillaumeIsabelleX/ngtranslating-mastery.git
