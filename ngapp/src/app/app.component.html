@@ -10,13 +10,15 @@
   </span>
 </div>
 
+
+<span>{{'HOME.HELLO' | translate}}</span>
+<h3>Current browser lang: {{browserLang}} <img [src]="getLanguageIconPath(browserLang)"  class="lang-icon"></h3>
+
   <hr>
 <button id="doSomething" (click)="doSomething()">{{'TEST.DOSOMETHING' | translate}} </button> Value : 
 <span>{{doResult }}</span>
 <hr>
 
-<span>{{'HOME.HELLO' | translate}}</span>
-<h3>Current browser lang: {{browserLang}} <img [src]="getLanguageIconPath(browserLang)"  class="lang-icon"></h3>
 <div style="text-align:center">
   <h1>
      <span id="title">{{'HOME.TITLE' | translate}} {{title}}</span></h1>
