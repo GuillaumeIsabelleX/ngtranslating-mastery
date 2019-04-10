@@ -1,0 +1,12 @@
+
+<div fxLayout="row"  fxLayoutAlign="end center" fxLayoutGap="gappx">
+
+  
+
+  <span *ngFor="let l of langSupported"   >
+    <button class="lang-button" (click)="setLanguage(l)" [id]="l" >{{l|uppercase }} <img [src]="getLanguageIconPath(l)"  class="lang-icon"></button> 
+  </span>
+</div>
+
+
+<h3>Current browser lang: {{browserLang}} <img [src]="getLanguageIconPath(browserLang)"  class="lang-icon"></h3>

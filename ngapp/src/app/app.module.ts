@@ -14,6 +14,7 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { MenulanguageComponent } from './lang/menulanguage/menulanguage.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -24,7 +25,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenulanguageComponent
   ],
   imports: [
     BrowserModule,

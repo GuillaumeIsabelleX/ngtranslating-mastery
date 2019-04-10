@@ -2,17 +2,16 @@
 
 <div fxLayout="row"  fxLayoutAlign="end center" fxLayoutGap="gappx">
 
-  <div>{{'WELCOME'| translate:{name:username} }} </div>
-
-
-  <span *ngFor="let l of langSupported"   >
-    <button class="lang-button" (click)="setLanguage(l)" [id]="l" >{{l|uppercase }} <img [src]="getLanguageIconPath(l)"  class="lang-icon"></button> 
-  </span>
+  
+  
+  <app-menulanguage></app-menulanguage>
 </div>
+
+<div>{{'WELCOME'| translate:{name:username} }} </div>
+
 
 
 <span>{{'HOME.HELLO' | translate}}</span>
-<h3>Current browser lang: {{browserLang}} <img [src]="getLanguageIconPath(browserLang)"  class="lang-icon"></h3>
 
   <hr>
 <button id="doSomething" (click)="doSomething()">{{'TEST.DOSOMETHING' | translate}} </button> Value : 
@@ -30,10 +29,10 @@
 <h2>{{ 'HELPSTART' | translate }} </h2>
 <ul>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">{{'HOME.TOURHEROES' | translate }}</a></h2>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI {{'HOME.DOC'| translate}}</a></h2>
   </li>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
