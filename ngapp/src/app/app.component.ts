@@ -88,7 +88,9 @@ export class AppComponent {
     this.refreshIconPath();
   }
 
+  
 
+//@testing Stuff
   doSomething(){
     console.log("do sometghing just ran");
     this.doResult = 'result passed';
