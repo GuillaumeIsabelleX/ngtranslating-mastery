@@ -1,5 +1,7 @@
 //@STCGoal That a object hierarchy and value can be specified by a Namespace
 //@cr mycmd "hello world" TARGET.MYVAL
+//@urir https://stackoverflow.com/questions/2308783/building-object-hierarchy-from-a-namespace-string/2308848#2308848
+
 //
 var txt = "hello world";
 var target = "HOME.FOOTER.MYNOTES";
