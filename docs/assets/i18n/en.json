@@ -1,0 +1,20 @@
+{
+	"CONTACT": {
+		"TITLE": "{{username}} Contact us with these means:"
+	},
+	"HELPSTART": "Here are some links to help you start:",
+	"HOME": {
+		"HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",
+		"MSG": "Welcome to this fantastic translation.  Using the Editor BabelEdit is great.  You have your 3 strings in one page.",
+		"TITLE": "Welcome to ",
+		"TOURHEROES":"Tour of Heroes",
+		"DOC":"Documentation"
+	},
+	"LANG": {
+		"NAME": "English"
+	},
+	"WELCOME": "Welcome {{name}}",
+	"TEST":{
+		"DOSOMETHING":"Do Something"
+	}
+}
