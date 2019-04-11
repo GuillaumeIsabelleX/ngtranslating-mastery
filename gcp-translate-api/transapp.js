@@ -36,7 +36,7 @@ readTransation()
          var fileTranslation = new JsonFile(filePath, { cantReadFileDefault: {} });
 
 
-         //Read the File
+         //Read the translation File
          fileTranslation.readAsync()
             .then((obj) => {
 
