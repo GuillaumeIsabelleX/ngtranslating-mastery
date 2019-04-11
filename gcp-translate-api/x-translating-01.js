@@ -1,16 +1,13 @@
 // Imports the Google Cloud client library
 const {Translate} = require('@google-cloud/translate');
  
-// Your Google Cloud Platform project ID
-const projectId = 'ngmastery-jasmine';
  
 // Instantiates a client
 const translate = new Translate({
-  projectId: projectId,
 });
  
 // The text to translate
-const text = 'Hello, world!';
+const text = 'Hello, world! There is much more that just saying hello that is possible when you have a creative orientation.';
 // The target language
 const target = 'de';
  

@@ -3,13 +3,14 @@ var JsonFile = require('@exponent/json-file');
 //@stcgoal Optimal management of JSON file 
 //@urir https://www.npmjs.com/package/@exponent/json-file
 
-
+//reads the JSON file
 var file = new JsonFile('dummy.json', {cantReadFileDefault: {}});
  
 //Read the File
  file.readAsync()
 .then((obj)=>
 {
+   //Adding new keys and value to the json file
    obj.mynewkey = "something";
    obj.mynewroot = new Object();
    obj.mynewroot.myval = "a new subchild";
@@ -21,6 +22,7 @@ var file = new JsonFile('dummy.json', {cantReadFileDefault: {}});
       console.log(v);
    }
 
+   //@STCgoal Writes the new JSON file
    file.writeAsync(obj);
 
 })
