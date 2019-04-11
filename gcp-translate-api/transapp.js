@@ -2,8 +2,11 @@
 const path = require('path');
 const fs = require('fs');
 var nsset = require('nsset');
+var JsonFile = require('@exponent/json-file');
+const {Translate} = require('@google-cloud/translate');
 
-var txt = "hello world is much more than a simple \"hello\"";
+
+var txt = "hello world is much more than a simple \"hello\" and that will never change";
 var target = "HOME.FOOTER.MYNOTES";
 
 //
@@ -20,16 +23,40 @@ readTransation()
       //listing all files using forEach
       files.forEach(function (file) {
          // Do whatever you want to do with the file
-         console.log(file);
-         var obj = require(i18nroot + '/' + file);
+         var filePath = i18nroot + '/' + file
+         console.log(filePath);
 
-        // var obj = JSON.parse(t);
-         var keys = Object.keys(obj);
-         for (var i = 0; i < keys.length; i++) {
-            var v = obj[keys[i]];
-            console.log(v);
-         }
+         var file = new JsonFile(filePath, { cantReadFileDefault: {} });
+
+
+         //Read the File
+         file.readAsync()
+            .then((obj) => {
+
+               //Adds a dummy value to test translation files
+               nsset.set(target, obj, txt);
+
+               //@STCgoal Writes the new JSON file
+               file.writeAsync(obj);
+
+            })
+            .catch((err) => {
+               console.log(err);
+            });
+
+
+         // var obj = require(filePath);
+         // // var obj = JSON.parse(t);
+         // var keys = Object.keys(obj);
+         // for (var i = 0; i < keys.length; i++) {
+         //    var v = obj[keys[i]];
+         //    console.log(v);
+         // }
       });
+      console.log(`
+               Angular HTML Use:
+               {{ '${target}' | translate }}
+               `);
    })
    .catch((err) => {
       console.log(err);
