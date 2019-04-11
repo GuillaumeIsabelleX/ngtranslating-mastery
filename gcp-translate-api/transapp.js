@@ -3,8 +3,14 @@ const path = require('path');
 const fs = require('fs');
 var nsset = require('nsset');
 var JsonFile = require('@exponent/json-file');
-const {Translate} = require('@google-cloud/translate');
+const { Translate } = require('@google-cloud/translate');
+// Instantiates a client
+const translate = new Translate({
+});
 
+
+
+//DEV
 
 var txt = "hello world is much more than a simple \"hello\" and that will never change";
 var target = "HOME.FOOTER.MYNOTES";
@@ -23,7 +29,8 @@ readTransation()
       //listing all files using forEach
       files.forEach(function (file) {
          // Do whatever you want to do with the file
-         var filePath = i18nroot + '/' + file
+         var filePath = i18nroot + '/' + file;
+         var langCode = file.replace(".json", "");
          console.log(filePath);
 
          var file = new JsonFile(filePath, { cantReadFileDefault: {} });
@@ -33,11 +40,36 @@ readTransation()
          file.readAsync()
             .then((obj) => {
 
-               //Adds a dummy value to test translation files
-               nsset.set(target, obj, txt);
 
-               //@STCgoal Writes the new JSON file
-               file.writeAsync(obj);
+               if (langCode != "en") {
+                  // Translates some text into Russian
+                  translate
+                     .translate(txt, langCode)
+                     .then(results => {
+                        const translation = results[0];
+
+                        //Adds a dummy value to test translation files
+                        nsset.set(target, obj, translation);
+
+                        //@STCgoal Writes the new JSON file
+                        file.writeAsync(obj);
+
+                        console.log(`Text: ${txt}`);
+                        console.log(`Translation: ${translation}`);
+                     })
+                     .catch(err => {
+                        console.error('ERROR:', err);
+                     });
+               }
+               else { //@status IS ENGLISH Original, not requiring translation
+
+                  //Adds a dummy value to test translation files
+                  nsset.set(target, obj, txt);
+
+                  //@STCgoal Writes the new JSON file
+                  file.writeAsync(obj);
+               }
+
 
             })
             .catch((err) => {
