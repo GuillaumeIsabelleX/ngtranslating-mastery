@@ -1,7 +1,7 @@
 {
-  "name": "gcp-translate-api",
-  "version": "1.0.0",
-  "description": "Master the Translate API to create",
+  "name": "transapp",
+  "version": "0.0.1",
+  "description": "Master the Translate API to create.  string Hello world is adde to each lang located in the i18n directory using the translator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
