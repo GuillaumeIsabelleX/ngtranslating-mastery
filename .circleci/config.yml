@@ -18,7 +18,7 @@ jobs:
       - run: git clone https://${GITHUB_TOKEN}@github.com/GuillaumeIsabelleX/ngtranslating-mastery.git .
       - run:  git pull
 
-
+      - run: mkdir -p docs
       - run: cd ngapp && yarn install
 
         # GIT User setup so we can publish the Doc
