@@ -11,14 +11,21 @@ var i18nroot = "./src/assets/i18n";
 
 
 readTransation()
-   .then((files)=>{
- //listing all files using forEach
-         files.forEach(function (file) {
-            // Do whatever you want to do with the file
-            console.log(file);
-         });
+   .then((files) => {
+      //listing all files using forEach
+      files.forEach(function (file) {
+         // Do whatever you want to do with the file
+         console.log(file);
+         var obj = require(i18nroot + '/' + file);
+
+        // var obj = JSON.parse(t);
+         var keys = Object.keys(obj);
+         for (var i = 0; i < keys.length; i++) {
+            console.log(obj[keys[i]]);
+         }
+      });
    })
-   .catch((err)=>{
+   .catch((err) => {
       console.log(err);
    });
 
@@ -26,9 +33,9 @@ readTransation()
 
 
 
-   /**
-    * Reads the directory
-    */
+/**
+ * Reads the directory
+ */
 function readTransation() {
    return new Promise(function (resolving, rejecting) {
 
@@ -41,10 +48,10 @@ function readTransation() {
          if (err) {
             rejecting(err);
             return console.log('Unable to scan directory: ' + err
-            + "\n Might want to run from your root app dir"
+               + "\n Might want to run from your root app dir"
             );
          }
-        
+
          resolving(files);
       });
    });
