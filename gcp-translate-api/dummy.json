@@ -12,5 +12,9 @@
   "dependencies": {
     "@exponent/json-file": "^5.3.0",
     "@google-cloud/translate": "^3.0.1"
+  },
+  "mynewkey": "something",
+  "mynewroot": {
+    "myval": "a new subchild"
   }
 }
