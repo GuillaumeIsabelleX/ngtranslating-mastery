@@ -10,20 +10,42 @@ var i18nroot = "./src/assets/i18n";
 //@a Reads all file in there
 
 
+readTransation()
+   .then((files)=>{
+ //listing all files using forEach
+         files.forEach(function (file) {
+            // Do whatever you want to do with the file
+            console.log(file);
+         });
+   })
+   .catch((err)=>{
+      console.log(err);
+   });
 
 
-//joining path of directory 
-const directoryPath = path.join(__dirname, i18nroot);
 
-//passsing directoryPath and callback function
-fs.readdir(directoryPath, function (err, files) {
-    //handling error
-    if (err) {
-        return console.log('Unable to scan directory: ' + err);
-    } 
-    //listing all files using forEach
-    files.forEach(function (file) {
-        // Do whatever you want to do with the file
-        console.log(file); 
-    });
-});
+
+
+   /**
+    * Reads the directory
+    */
+function readTransation() {
+   return new Promise(function (resolving, rejecting) {
+
+      //joining path of directory 
+      const directoryPath = path.join(__dirname, i18nroot);
+
+      //passsing directoryPath and callback function
+      fs.readdir(directoryPath, function (err, files) {
+         //handling error
+         if (err) {
+            rejecting(err);
+            return console.log('Unable to scan directory: ' + err
+            + "\n Might want to run from your root app dir"
+            );
+         }
+        
+         resolving(files);
+      });
+   });
+}
