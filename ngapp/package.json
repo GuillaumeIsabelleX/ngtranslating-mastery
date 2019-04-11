@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:docs": "ng build --prod --output-path ../docs --base-href /ngtranslating-mastery/docs && cp ../docs/index.html ../docs/404.html ",
+    "build:docs": "mkdir -p ../docs; ng build --prod --output-path ../docs --base-href /ngtranslating-mastery/docs && cp ../docs/index.html ../docs/404.html ",
     "commit:docs": "./commit_docs.sh",
     "release:docs": "npm run build:docs && npm run commit:docs",
     "browse:release": "gixb https://guillaumeisabellex.github.io/ngtranslating-mastery/",
