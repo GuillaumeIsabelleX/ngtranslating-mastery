@@ -1,6 +1,11 @@
 
 const path = require('path');
 const fs = require('fs');
+var nsset = require('nsset');
+
+var txt = "hello world is much more than a simple \"hello\"";
+var target = "HOME.FOOTER.MYNOTES";
+
 //
 
 //Assuming you runs from the root of your app.
