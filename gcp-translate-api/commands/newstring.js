@@ -1,4 +1,4 @@
-
+console.log("newstring.js loading");
 
 const path = require('path');
 const fs = require('fs');
@@ -18,7 +18,7 @@ const translate = new Translate({
 /* /commands/newstring.js */
 exports.default = {
     cmd: __filename,
-    args: ['textSource', 'targetObject'],
+    args: ['txt', 'target'],
     options: [
         ['-f', '--force', 'Override it!'],
         ['-t', '--source', 'English text source to translate'],
@@ -29,93 +29,101 @@ exports.default = {
         + '#> transapp newstring "hello world" "HOME.GREETING"'
     ,
     action: (txt, target, options) => {
-        console.log("New Text : " + txt);
-        console.log("Namespace : " + target);
-        console.log(options);
+        return new Promise(function (resolve, reject) {
+
+            console.log("New Text : " + txt);
+            console.log("Namespace : " + target);
+            console.log(options);
 
 
-        //Assuming you runs from the root of your app.
+            //Assuming you runs from the root of your app.
 
-        var i18nroot = "/src/assets/i18n";
+            var i18nroot = "/src/assets/i18n";
 
-        //@a Reads all file in there
-
-
-        readTransation()
-            .then((files) => {
-                //listing all files using forEach
-                files.forEach(function (file) {
-                    // Do whatever you want to do with the file
-                    var filePath = i18nroot + '/' + file;
-                    var langCode = file.replace(".json", "");
-                    console.log(filePath);
-
-                    var fileTranslation = new JsonFile(filePath, { cantReadFileDefault: {} });
+            //@a Reads all file in there
 
 
-                    //Read the translation File
-                    fileTranslation.readAsync()
-                        .then((obj) => {
+            readTransation()
+                .then((files) => {
+                    //listing all files using forEach
+                    files.forEach(function (file) {
+                        // Do whatever you want to do with the file
+                        var filePath = i18nroot + '/' + file;
+                        var langCode = file.replace(".json", "");
+                        console.log(filePath);
+
+                        var fileTranslation = new JsonFile(filePath, { cantReadFileDefault: {} });
 
 
-                            if (langCode != "en") {
-                                // Translates some text into Russian
-                                translate
-                                    .translate(txt, langCode)
-                                    .then(results => {
-                                        const translation = results[0];
-
-                                        //Adds a dummy value to test translation files
-                                        nsset.set(target, obj, translation);
-
-                                        //@STCgoal Writes the new JSON file
-                                        fileTranslation.writeAsync(obj);
-
-                                        console.log(`Text: ${txt}`);
-                                        console.log(`Translation: ${translation}`);
-                                    })
-                                    .catch(err => {
-                                        console.error('ERROR:', err);
-                                    });
-                            }
-                            else { //@status IS ENGLISH Original, not requiring translation
-
-                                //Adds a dummy value to test translation files
-                                nsset.set(target, obj, txt);
-
-                                //@STCgoal Writes the new JSON file
-                                fileTranslation.writeAsync(obj);
-                            }
+                        //Read the translation File
+                        fileTranslation.readAsync()
+                            .then((obj) => {
 
 
-                        })
-                        .catch((err) => {
-                            console.log(err);
-                        });
+                                if (langCode != "en") {
+                                    // Translates some text into Russian
+                                    translate
+                                        .translate(txt, langCode)
+                                        .then(results => {
+                                            const translation = results[0];
+
+                                            //Adds a dummy value to test translation files
+                                            nsset.set(target, obj, translation);
+
+                                            //@STCgoal Writes the new JSON file
+                                            fileTranslation.writeAsync(obj);
+
+                                            console.log(`Text: ${txt}`);
+                                            console.log(`Translation: ${translation}`);
+
+                                        })
+                                        .catch(err => {
+                                            console.error('ERROR:', err);
+                                            reject(err);
+                                        });
+                                }
+                                else { //@status IS ENGLISH Original, not requiring translation
+
+                                    //Adds a dummy value to test translation files
+                                    nsset.set(target, obj, txt);
+
+                                    //@STCgoal Writes the new JSON file
+                                    fileTranslation.writeAsync(obj);
+                                }
 
 
-                    // var obj = require(filePath);
-                    // // var obj = JSON.parse(t);
-                    // var keys = Object.keys(obj);
-                    // for (var i = 0; i < keys.length; i++) {
-                    //    var v = obj[keys[i]];
-                    //    console.log(v);
-                    // }
-                });
-                console.log(`
-               Angular HTML Use:
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                                reject(err);
+                            });
+
+
+                        // var obj = require(filePath);
+                        // // var obj = JSON.parse(t);
+                        // var keys = Object.keys(obj);
+                        // for (var i = 0; i < keys.length; i++) {
+                        //    var v = obj[keys[i]];
+                        //    console.log(v);
+                        // }
+                    });
+                    console.log(`
+                Angular HTML Use:
                {{ '${target}' | translate }}
                `);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+
+                    resolve(txt);
+                })
+                .catch((err) => {
+                    console.log(err);
+                    reject(err);
+                });
 
 
 
 
 
-        return 1;
+        });
     }
 };
 
@@ -133,7 +141,7 @@ exports.default = {
 
 /**
  * Reads the directory
- */
+*/
 function readTransation() {
     return new Promise(function (resolving, rejecting) {
 
@@ -154,3 +162,5 @@ function readTransation() {
         });
     });
 }
+
+console.log("newstring.js loaded");

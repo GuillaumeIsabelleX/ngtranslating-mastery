@@ -12,6 +12,9 @@
   "dependencies": {
     "@exponent/json-file": "^5.3.0",
     "@google-cloud/translate": "^3.0.1",
-    "cmd-line": "^1.0.2"
+    "cmd-line": "^1.0.2",
+    "npm": "^6.9.0",
+    "nsset": "^1.0.17",
+    "tlid": "^1.0.9"
   }
 }

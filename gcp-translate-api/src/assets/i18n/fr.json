@@ -1,20 +1,23 @@
 {
-	"CONTACT": {
-		"TITLE": "{{username}} Contactez-nous avec ces moyens: "
-	},
-	"HELPSTART": "Voici des liens pour aider a demarrer:",
-	"HOME": {
-		"HELLO": "Bonjour, essayons ngx-translate",
-		"MSG": "Bienvenue dans cette traduction fantastique. Utilisation de l'éditeur BabelEdit est excellent. Vous avez vos 3 chaînes dans une page.",
-		"TITLE": "Bienvenue a ",
-		"TOURHEROES":"Tour des heroes",
-		"DOC":"Documentation"
-	},
-	"LANG": {
-		"NAME": "French"
-	},
-	"WELCOME": "Bienvenue {{name}}",
-	"TEST":{
-		"DOSOMETHING":"Faire quelque chose"
-	}
+  "CONTACT": {
+    "TITLE": "{{username}} Contactez-nous avec ces moyens: "
+  },
+  "HELPSTART": "Voici des liens pour aider a demarrer:",
+  "HOME": {
+    "HELLO": "Bonjour, essayons ngx-translate",
+    "MSG": "Bienvenue dans cette traduction fantastique. Utilisation de l'éditeur BabelEdit est excellent. Vous avez vos 3 chaînes dans une page.",
+    "TITLE": "Bienvenue a ",
+    "TOURHEROES": "Tour des heroes",
+    "DOC": "Documentation",
+    "FOOTER": {
+      "MYNOTES": "Bonjour tout le monde est beaucoup plus qu'un simple \"bonjour\" et cela ne changera jamais"
+    }
+  },
+  "LANG": {
+    "NAME": "French"
+  },
+  "WELCOME": "Bienvenue {{name}}",
+  "TEST": {
+    "DOSOMETHING": "Faire quelque chose"
+  }
 }

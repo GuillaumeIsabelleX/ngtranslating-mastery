@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-//@stcgoal Optmal way to create command line app
+//@stcgoal Optimal way to create command line app
 /* /mycommand */
 const CMD = require('cmd-line').default;
-const cmdtest = new CMD('mycommand');
+
+const cmdtest = new CMD('mycommand'); //@s located into ./commands/mycommand.js
 let promise = cmdtest.loadcommands(__dirname)
     .includehostcommands()
     .execute(process.argv);
