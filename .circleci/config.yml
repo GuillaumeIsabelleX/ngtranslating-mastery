@@ -35,7 +35,7 @@ jobs:
       - run: cd ngapp && yarn build:docs
       - run: pwd && ls docs
       - run: git add docs/*
-     # - run: git commit docs -m "docs updated by CircleCI"
+      - run: git commit docs -m "docs updated by CircleCI"
 
         # release:docs using ${GITHUB_TOKEN}
         # https://github.com/GuillaumeIsabelleX/ngtranslating-mastery.git
