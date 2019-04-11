@@ -17,8 +17,9 @@ import { By } from '@angular/platform-browser';
 import { ExpectedConditions } from 'protractor';
 
 let count = 0;
+import {MenulanguageComponent} from './lang/menulanguage/menulanguage.component';
 
-describe('AppComponent', () => {
+describe('AppComponent Testing', () => {
 
 
   //Loading tests from :
@@ -48,7 +49,8 @@ describe('AppComponent', () => {
       ],
       providers: [TranslateService],
       declarations: [
-        AppComponent
+        AppComponent,
+        MenulanguageComponent
       ],
     }).compileComponents().then(() => {
       fixture = TestBed.createComponent(AppComponent);
