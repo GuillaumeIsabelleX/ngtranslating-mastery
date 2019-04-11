@@ -4,7 +4,7 @@
   },
   "HELPSTART": "Here are some links to help you start:",
   "HOME": {
-    "HELLO": "Hello world",
+    "HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",
     "MSG": "Welcome to this fantastic translation.  Using the Editor BabelEdit is great.  You have your 3 strings in one page.",
     "TITLE": "Welcome to ",
     "TOURHEROES": "Tour of Heroes",
@@ -13,7 +13,8 @@
       "MYNOTES": "hello world is much more than a simple \"hello\" and that will never change"
     },
     "CLI": "Hello world of command line tools. Translating automation is an optimal way to create cultural extension",
-    "TEST": "Hello world"
+    "TEST": "Hello worldd of software developper.",
+    "TST": "Hello worlddof software developper."
   },
   "LANG": {
     "NAME": "English"

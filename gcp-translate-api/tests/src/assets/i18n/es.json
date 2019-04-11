@@ -4,7 +4,7 @@
   },
   "HELPSTART": "Aquí hay algunos enlaces para ayudarte a comenzar:",
   "HOME": {
-    "HELLO": "Hola Mundo",
+    "HELLO": "Bienvenido, intentemos ngx-translate",
     "MSG": "Bienvenidos a esta fantástica traducción. Usar el Editor BabelEdit es genial. Tienes tus 3 cadenas en una sola página.",
     "TITLE": "Bienvenido a ",
     "TOURHEROES": "Tour das heroes",
@@ -13,7 +13,8 @@
       "MYNOTES": "hola mundo es mucho más que un simple \"hola\" y eso nunca cambiará"
     },
     "CLI": "Hola mundo de las herramientas de línea de comandos. Traducir la automatización es una forma óptima de crear extensión cultural.",
-    "TEST": "Hola Mundo"
+    "TEST": "Hola worldd de desarrollo de software.",
+    "TST": "Hola desarrollador de software worlddof."
   },
   "LANG": {
     "NAME": "Spanish"

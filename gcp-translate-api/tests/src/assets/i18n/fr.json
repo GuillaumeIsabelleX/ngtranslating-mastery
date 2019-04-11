@@ -4,7 +4,7 @@
   },
   "HELPSTART": "Voici des liens pour aider a demarrer:",
   "HOME": {
-    "HELLO": "Bonjour le monde",
+    "HELLO": "Bonjour, essayons ngx-translate",
     "MSG": "Bienvenue dans cette traduction fantastique. Utilisation de l'éditeur BabelEdit est excellent. Vous avez vos 3 chaînes dans une page.",
     "TITLE": "Bienvenue a ",
     "TOURHEROES": "Tour des heroes",
@@ -13,7 +13,8 @@
       "MYNOTES": "Bonjour tout le monde est beaucoup plus qu'un simple \"bonjour\" et cela ne changera jamais"
     },
     "CLI": "Bonjour le monde des outils de ligne de commande. Traduire l’automatisation est un moyen optimal de créer une extension culturelle",
-    "TEST": "Bonjour le monde"
+    "TEST": "Bonjour tout le monde du développeur de logiciels.",
+    "TST": "Bonjour worlddof développeur de logiciels."
   },
   "LANG": {
     "NAME": "French"

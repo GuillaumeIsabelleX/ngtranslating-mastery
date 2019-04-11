@@ -18,7 +18,10 @@ const translate = new Translate({
 //
 //Assuming you runs from the root of your app.
 
-var i18nroot =path.join(__dirname, "../src/assets/i18n" );
+var currentPath = process.cwd();
+
+var i18nroot =path.join(currentPath, "/src/assets/i18n" );
+// console.log(__dirname);
 
 // __dirname + "/src/assets/i18n";
 
@@ -39,7 +42,7 @@ exports.default = {
     action: (txt, target,options) => {
         return new Promise(function (resolve, reject) {
         if (options.verbose) verbose = options.verbose;
-        
+
           if (verbose > -1)  {console.log("New Translated Text String  :\n\t " + txt);
             console.log("Namespace Target : \n\t" + target);}
            // console.log(options);
