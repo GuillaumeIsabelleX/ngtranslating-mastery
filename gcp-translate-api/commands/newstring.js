@@ -1,10 +1,12 @@
-console.log("newstring.js loading");
-
+ 
 const path = require('path');
 const fs = require('fs');
 var nsset = require('nsset');
 var JsonFile = require('@exponent/json-file');
 const { Translate } = require('@google-cloud/translate');
+
+var verbose = 0;
+
 
 
 // Instantiates a client
@@ -14,31 +16,35 @@ const translate = new Translate({
 
 //@STCgoal Add a new string to the Translation
 //
+//Assuming you runs from the root of your app.
+
+var i18nroot =path.join(__dirname, "../src/assets/i18n" );
+
+// __dirname + "/src/assets/i18n";
 
 /* /commands/newstring.js */
 exports.default = {
     cmd: __filename,
     args: ['txt', 'target'],
     options: [
-        ['-f', '--force', 'Override it!'],
-        ['-t', '--source', 'English text source to translate'],
-        ['-l', '--lang', 'target language']
-        ['-i', '--init', 'Init a new lang - reads all english string and create the new. use with --lang']
+        ['-f','--force', 'Override it!'],
+        ['-v','--verbose', 'verbose'],
+        ['--port','--port comport com4', 'Select your COMPort.'],
+        ['-t','--source','English text source to translate'],
+        ['-l','--lang','target language']
     ],
     description: 'Add a new string to all translation files.\n--------------------------------\n'
         + '#> transapp newstring "hello world" "HOME.GREETING"'
     ,
-    action: (txt, target, options) => {
+    action: (txt, target,options) => {
         return new Promise(function (resolve, reject) {
+        if (options.verbose) verbose = options.verbose;
+        
+          if (verbose > -1)  {console.log("New Translated Text String  :\n\t " + txt);
+            console.log("Namespace Target : \n\t" + target);}
+           // console.log(options);
 
-            console.log("New Text : " + txt);
-            console.log("Namespace : " + target);
-            console.log(options);
 
-
-            //Assuming you runs from the root of your app.
-
-            var i18nroot = "/src/assets/i18n";
 
             //@a Reads all file in there
 
@@ -50,7 +56,7 @@ exports.default = {
                         // Do whatever you want to do with the file
                         var filePath = i18nroot + '/' + file;
                         var langCode = file.replace(".json", "");
-                        console.log(filePath);
+                        if (verbose > 0)  console.log(filePath);
 
                         var fileTranslation = new JsonFile(filePath, { cantReadFileDefault: {} });
 
@@ -73,8 +79,10 @@ exports.default = {
                                             //@STCgoal Writes the new JSON file
                                             fileTranslation.writeAsync(obj);
 
-                                            console.log(`Text: ${txt}`);
+                                            if (verbose > 0)   {
+                                                console.log(`Text: ${txt}`);
                                             console.log(`Translation: ${translation}`);
+                                        }
 
                                         })
                                         .catch(err => {
@@ -146,7 +154,8 @@ function readTransation() {
     return new Promise(function (resolving, rejecting) {
 
         //joining path of directory 
-        const directoryPath = path.join(__dirname, i18nroot);
+        const directoryPath = i18nroot;
+        //path.join(__dirname, i18nroot);
 
         //passsing directoryPath and callback function
         fs.readdir(directoryPath, function (err, files) {
@@ -163,4 +172,3 @@ function readTransation() {
     });
 }
 
-console.log("newstring.js loaded");

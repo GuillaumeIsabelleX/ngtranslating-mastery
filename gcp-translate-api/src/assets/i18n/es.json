@@ -11,7 +11,8 @@
     "DOC": "Documentazion",
     "FOOTER": {
       "MYNOTES": "hola mundo es mucho más que un simple \"hola\" y eso nunca cambiará"
-    }
+    },
+    "CLI": "Hola mundo de las herramientas de línea de comandos. Traducir la automatización es una forma óptima de crear extensión cultural."
   },
   "LANG": {
     "NAME": "Spanish"

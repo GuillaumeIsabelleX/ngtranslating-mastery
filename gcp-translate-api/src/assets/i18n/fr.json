@@ -11,7 +11,8 @@
     "DOC": "Documentation",
     "FOOTER": {
       "MYNOTES": "Bonjour tout le monde est beaucoup plus qu'un simple \"bonjour\" et cela ne changera jamais"
-    }
+    },
+    "CLI": "Bonjour le monde des outils de ligne de commande. Traduire l’automatisation est un moyen optimal de créer une extension culturelle"
   },
   "LANG": {
     "NAME": "French"

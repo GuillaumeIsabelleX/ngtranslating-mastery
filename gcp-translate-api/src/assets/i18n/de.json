@@ -11,7 +11,8 @@
     "DOC": "Dokumentation",
     "FOOTER": {
       "MYNOTES": "Hallo Welt ist viel mehr als ein einfaches \"Hallo\" und das wird sich niemals ändern"
-    }
+    },
+    "CLI": "Hallo Welt der Kommandozeilenwerkzeuge. Übersetzen von Automatisierung ist eine optimale Möglichkeit, kulturelle Erweiterungen zu schaffen"
   },
   "LANG": {
     "NAME": "German"
