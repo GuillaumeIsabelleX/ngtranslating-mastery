@@ -33,11 +33,11 @@ readTransation()
          var langCode = file.replace(".json", "");
          console.log(filePath);
 
-         var file = new JsonFile(filePath, { cantReadFileDefault: {} });
+         var fileTranslation = new JsonFile(filePath, { cantReadFileDefault: {} });
 
 
          //Read the File
-         file.readAsync()
+         fileTranslation.readAsync()
             .then((obj) => {
 
 
@@ -52,7 +52,7 @@ readTransation()
                         nsset.set(target, obj, translation);
 
                         //@STCgoal Writes the new JSON file
-                        file.writeAsync(obj);
+                        fileTranslation.writeAsync(obj);
 
                         console.log(`Text: ${txt}`);
                         console.log(`Translation: ${translation}`);
@@ -67,7 +67,7 @@ readTransation()
                   nsset.set(target, obj, txt);
 
                   //@STCgoal Writes the new JSON file
-                  file.writeAsync(obj);
+                  fileTranslation.writeAsync(obj);
                }
 
 
