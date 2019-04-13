@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 jobs:
   build:
     filters:  # using regex filters requires the entire branch to match     
