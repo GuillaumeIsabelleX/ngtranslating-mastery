@@ -1,20 +1,26 @@
 {
-	"CONTACT": {
-		"TITLE": "{{username}} Kontaktieren Sie uns mit diesen Mitteln:"
-	},
-	"HELPSTART": "Hier sind einige Links, die Ihnen beim Start helfen:",
-	"HOME": {
-		"HELLO": "Hallo hier, das ist ein Versuch des ngx-translate - Dies ist offensichtlich die englische Zeichenfolge ",
-		"MSG": "Willkommen zu dieser fantastischen Übersetzung. Die Verwendung des Editors BabelEdit ist großartig. Sie haben Ihre 3 Saiten auf einer Seite.",
-		"TITLE": "Willkommen zu ",
-		"TOURHEROES":"Tour der Helden",
-		"DOC":"Dokumentation"
-	},
-	"LANG": {
-		"NAME": "German"
-	},
-	"WELCOME": "HERZLICH WILLKOMMEN {{name}}",
-	"TEST":{
-		"DOSOMETHING":"Etwas tun"
-	}
+  "CONTACT": {
+    "TITLE": "{{username}} Kontaktieren Sie uns mit diesen Mitteln:"
+  },
+  "HELPSTART": "Hier sind einige Links, die Ihnen beim Start helfen:",
+  "HOME": {
+    "HELLO": "Hallo hier, das ist ein Versuch des ngx-translate - Dies ist offensichtlich die englische Zeichenfolge ",
+    "MSG": "Willkommen zu dieser fantastischen Übersetzung. Die Verwendung des Editors BabelEdit ist großartig. Sie haben Ihre 3 Saiten auf einer Seite.",
+    "TITLE": "Willkommen zu ",
+    "TOURHEROES": "Tour der Helden",
+    "DOC": "Dokumentation",
+    "TST": "Hallo Welt der Softwareentwicklung.",
+    "GREETING": "Hallo an alle, willkommen zu dieser Angular-Anwendung, die die Übersetzungsfähigkeiten anzeigt."
+  },
+  "LANG": {
+    "NAME": "German"
+  },
+  "WELCOME": "HERZLICH WILLKOMMEN {{name}}",
+  "TEST": {
+    "DOSOMETHING": "Etwas tun"
+  },
+  "ABOUT": {
+    "TRANSLATION": "Übersetzung ist wichtig, weil Menschen ihre Muttersprache bevorzugen. Englisch ist die am meisten gesprochene Sprache.",
+    "TRANSLATIONTITLE": "Über die Übersetzung"
+  }
 }
