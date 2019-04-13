@@ -1,20 +1,26 @@
 {
-	"CONTACT": {
-		"TITLE": "{{username}} Contactez-nous avec ces moyens: "
-	},
-	"HELPSTART": "Voici des liens pour aider a demarrer:",
-	"HOME": {
-		"HELLO": "Bonjour, essayons ngx-translate",
-		"MSG": "Bienvenue dans cette traduction fantastique. Utilisation de l'éditeur BabelEdit est excellent. Vous avez vos 3 chaînes dans une page.",
-		"TITLE": "Bienvenue a ",
-		"TOURHEROES":"Tour des heroes",
-		"DOC":"Documentation"
-	},
-	"LANG": {
-		"NAME": "French"
-	},
-	"WELCOME": "Bienvenue {{name}}",
-	"TEST":{
-		"DOSOMETHING":"Faire quelque chose"
-	}
+  "CONTACT": {
+    "TITLE": "{{username}} Contactez-nous avec ces moyens: "
+  },
+  "HELPSTART": "Voici des liens pour aider a demarrer:",
+  "HOME": {
+    "HELLO": "Bonjour, essayons ngx-translate",
+    "MSG": "Bienvenue dans cette traduction fantastique. Utilisation de l'éditeur BabelEdit est excellent. Vous avez vos 3 chaînes dans une page.",
+    "TITLE": "Bienvenue a ",
+    "TOURHEROES": "Tour des heroes",
+    "DOC": "Documentation",
+    "TST": "Bonjour tout le monde du développeur de logiciels.",
+    "GREETING": "Bonjour à tous, bienvenue dans cette application angulaire présentant la maîtrise de la traduction."
+  },
+  "LANG": {
+    "NAME": "French"
+  },
+  "WELCOME": "Bienvenue {{name}}",
+  "TEST": {
+    "DOSOMETHING": "Faire quelque chose"
+  },
+  "ABOUT": {
+    "TRANSLATION": "La traduction est importante parce que les gens préfèrent leur langue maternelle. L'anglais est la langue la plus parlée.",
+    "TRANSLATIONTITLE": "A propos de la traduction"
+  }
 }

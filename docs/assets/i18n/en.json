@@ -1,20 +1,26 @@
 {
-	"CONTACT": {
-		"TITLE": "{{username}} Contact us with these means:"
-	},
-	"HELPSTART": "Here are some links to help you start:",
-	"HOME": {
-		"HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",
-		"MSG": "Welcome to this fantastic translation.  Using the Editor BabelEdit is great.  You have your 3 strings in one page.",
-		"TITLE": "Welcome to ",
-		"TOURHEROES":"Tour of Heroes",
-		"DOC":"Documentation"
-	},
-	"LANG": {
-		"NAME": "English"
-	},
-	"WELCOME": "Welcome {{name}}",
-	"TEST":{
-		"DOSOMETHING":"Do Something"
-	}
+  "CONTACT": {
+    "TITLE": "{{username}} Contact us with these means:"
+  },
+  "HELPSTART": "Here are some links to help you start:",
+  "HOME": {
+    "HELLO": "Hello here that is a try of the ngx-translate - This is obviously the English string ",
+    "MSG": "Welcome to this fantastic translation.  Using the Editor BabelEdit is great.  You have your 3 strings in one page.",
+    "TITLE": "Welcome to ",
+    "TOURHEROES": "Tour of Heroes",
+    "DOC": "Documentation",
+    "TST": "Hello world of software developper.",
+    "GREETING": "Hello everyone, welcome to this Angular application showing up translating mastery."
+  },
+  "LANG": {
+    "NAME": "English"
+  },
+  "WELCOME": "Welcome {{name}}",
+  "TEST": {
+    "DOSOMETHING": "Do Something"
+  },
+  "ABOUT": {
+    "TRANSLATION": "Translation is Important Because People Prefer Their Native Language. English is the most-widely spoken language.",
+    "TRANSLATIONTITLE": "About translation"
+  }
 }
