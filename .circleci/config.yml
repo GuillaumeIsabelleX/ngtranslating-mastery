@@ -1,6 +1,9 @@
-version: 2
+version: 2.1
 jobs:
   build:
+    filters:  # using regex filters requires the entire branch to match     
+      tags:
+        only: /^v.*/
     docker:
       # specify the version you desire here
       - image: circleci/node:10-browsers
