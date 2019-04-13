@@ -1997,6 +1997,16 @@ needle@^2.2.1:
     iconv-lite "^0.4.4"
     sax "^1.2.4"
 
+ngx-translate-helpercli@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/ngx-translate-helpercli/-/ngx-translate-helpercli-0.0.5.tgz#02c99b99fdfa5587f96dd5f6b99be6fea94921de"
+  integrity sha512-6a/SOZe/XjxaUH2B1Q2veECXji5KFoqXjTXUehso/M478o08g8iJJysn4/vh087pALcahX8lVzoN1rqvUx98jg==
+  dependencies:
+    "@exponent/json-file" "^5.3.0"
+    "@google-cloud/translate" "^3.0.1"
+    cmd-line "^1.0.2"
+    nsset "^1.0.17"
+
 node-fetch-npm@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/node-fetch-npm/-/node-fetch-npm-2.0.2.tgz#7258c9046182dca345b4208eda918daf33697ff7"

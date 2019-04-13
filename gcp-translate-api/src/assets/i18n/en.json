@@ -13,7 +13,8 @@
       "MYNOTES": "hello world is much more than a simple \"hello\" and that will never change"
     },
     "CLI": "Hello world of command line tools. Translating automation is an optimal way to create cultural extension",
-    "TEST": "Hello world"
+    "TEST": "Hello world",
+    "TST2": "Hello worlddof software developper."
   },
   "LANG": {
     "NAME": "English"
